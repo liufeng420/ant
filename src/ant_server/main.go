@@ -8,8 +8,10 @@ import (
 
 func main() {
 	// listen
+	fmt.Println("hello ant server")
 	ln, err := net.Listen("tcp", ":3806")
 	if err != nil {
+		fmt.Println(err)
 		panic("listen error")
 		os.Exit(1)
 	}

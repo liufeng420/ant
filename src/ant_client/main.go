@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"strconv"
 )
 
 func main() {
@@ -24,6 +25,6 @@ func sendMessage(i, j int) {
 	if err != nil {
 		panic("error")
 	}
-	message := "hello, i am thread :" + string(i) + " dial:" + string(j) + "\r\n"
+	message := "hello, i am thread :" + strconv.Itoa(i) + " dial:" + strconv.Itoa(j) + "\r\n"
 	fmt.Fprint(conn, message)
 }
