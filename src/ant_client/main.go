@@ -11,11 +11,11 @@ func main() {
 	count := 10
 	fmt.Println("hello go")
 	for i := 0; i < currency; i++ {
-		go func() {
+		go func(i int) {
 			for j := 0; j < count; j++ {
 				sendMessage(i, j)
 			}
-		}()
+		}(i)
 	}
 	select {}
 }
